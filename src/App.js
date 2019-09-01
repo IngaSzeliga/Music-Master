@@ -24,7 +24,8 @@ class App extends Component {
   };
 
   render() {
-    const { artist } = this.state;
+    const { artistQuery, artist } = this.state;
+    
     return (
       <div>
         <h1>Music Master</h1>
@@ -36,7 +37,7 @@ class App extends Component {
           />
           <i onClick={this.searchArtist} className="fa fa-search"></i>
         </form>
-        {artist ? <Artist artistProps={artist}/> : null}
+        {artist ? <Artist artistQuery={artistQuery} artistProps={artist}/> : null}
       </div>
     );
   }
